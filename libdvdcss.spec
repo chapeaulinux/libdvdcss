@@ -5,7 +5,9 @@ Release:        1%{?dist}
 License:        GPLv2+
 URL:            http://www.videolan.org/%{name}/
 
-Source:         http://www.videolan.org/pub/videolan/%{name}/%{version}/%{name}-%{version}.tar.bz2
+#Source:         http://www.videolan.org/pub/videolan/%{name}/%{version}/%{name}-%{version}.tar.bz2
+#Source:         http://download.videolan.org/pub/%{name}/%{version}/%{name}-%{version}.tar.bz2
+Source:		%{name}-%{version}.tar.bz2
 
 BuildRequires:  doxygen
 Requires(post): ldconfig
@@ -54,6 +56,9 @@ rm -fr %{buildroot}%{_docdir}/%{name}
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Tue Nov 03 2015 Vince Pooley <vince@chapeaulinux.org> - 1.3.99-2
+- Changed source in spec file
+
 * Sun Feb 01 2015 Vince Pooley <vince@chapeaulinux.org> - 1.3.99-1
 - Update to 1.3.99
 
